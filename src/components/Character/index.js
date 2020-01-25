@@ -40,21 +40,23 @@ export default function Character({ id, data }) {
               <div className="gender">
                 <span>
                   <FaTransgenderAlt />
-                  Gender
+                  <span>Gender: </span>
+                  <p> {data.gender}</p>
                 </span>
-                <p>{data.gender}</p>
               </div>
               <div className="birth">
                 <span>
-                  <FaBirthdayCake /> Birth Year
+                  <FaBirthdayCake />
+                  <span>Birth Year: </span>
+                  <p>{data.birth_year}</p>
                 </span>
-                <p>{data.birth_year}</p>
               </div>
               <div className="eye">
                 <span>
-                  <FaEye /> Eye color
+                  <FaEye />
+                  <span>Eye color: </span>
+                  <p>{data.eye_color}</p>
                 </span>
-                <p>{data.eye_color}</p>
               </div>
             </div>
 

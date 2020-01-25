@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 export const FrontCard = styled.div`
-  height: 350px;
+  height: 400px;
   background-color: ${lighten(0.07, '#0B0A0D')};
   background: url(${props => props.background}) top center no-repeat;
   background-size: cover;
@@ -37,7 +37,7 @@ export const FrontCard = styled.div`
 `;
 
 export const BackCard = styled.div`
-  height: 350px;
+  height: 400px;
   background-color: ${lighten(0.07, '#0B0A0D')};
   color: #fff;
   border-radius: 8px;
@@ -74,14 +74,25 @@ export const Bio = styled.div`
 
   .info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 30px 0px;
     text-align: center;
 
+    span {
+      align-self: center;
+
+      span {
+        margin-right: 10px;
+      }
+      p {
+        color: #fff;
+      }
+    }
+
     .gender,
     .birth {
-      border-right: 1px solid yellow;
-      padding-right: 5px;
+      margin-bottom: 10px;
     }
 
     span {
@@ -89,7 +100,6 @@ export const Bio = styled.div`
       align-items: center;
       font-weight: bold;
       color: #ffe300;
-      margin-bottom: 3px;
 
       svg {
         margin-right: 5px;
