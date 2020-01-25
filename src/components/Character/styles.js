@@ -4,8 +4,7 @@ import { lighten } from 'polished';
 export const FrontCard = styled.div`
   height: 350px;
   background-color: ${lighten(0.07, '#0B0A0D')};
-  background: url('https://starwars-visualguide.com/assets/img/characters/4.jpg')
-    top center no-repeat;
+  background: url(${props => props.background}) top center no-repeat;
   background-size: cover;
   color: #fff;
   border-radius: 8px;
@@ -54,8 +53,7 @@ export const PicWrapper = styled.div`
     top: -30px;
     width: 85px;
     height: 85px;
-    background: url('https://starwars-visualguide.com/assets/img/characters/4.jpg')
-      top center no-repeat;
+    background: url(${props => props.picture}) top center no-repeat;
     background-size: cover;
     border-radius: 50%;
     border: 1px solid #ffe300;
@@ -78,6 +76,12 @@ export const Bio = styled.div`
     justify-content: space-between;
     margin: 30px 0px;
     text-align: center;
+
+    .gender,
+    .birth {
+      border-right: 1px solid yellow;
+      padding-right: 5px;
+    }
 
     span {
       display: flex;

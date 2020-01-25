@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import ReactCardFlip from 'react-card-flip';
 
 import {
@@ -11,24 +12,29 @@ import { GiBodyHeight } from 'react-icons/gi';
 
 import { FrontCard, BackCard, PicWrapper, Bio } from './styles';
 
-export default function Character() {
+export default function Character({ id, data }) {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  const backgroundURL = `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
 
   return (
     <ReactCardFlip isFlipped={isFlipped}>
-      <FrontCard onClick={() => setIsFlipped(!isFlipped)}>
+      <FrontCard
+        onClick={() => setIsFlipped(!isFlipped)}
+        background={backgroundURL}
+      >
         <div>
-          <span>Darth Vader</span>
+          <span>{data.name}</span>
           <p>Click to see more info</p>
         </div>
       </FrontCard>
 
       <BackCard onClick={() => setIsFlipped(!isFlipped)}>
-        <PicWrapper>
+        <PicWrapper picture={backgroundURL}>
           <div className="picture" />
           <Bio>
             <div className="name">
-              <h2>Darth Vader</h2>
+              <h2>{data.name}</h2>
             </div>
             <div className="info">
               <div className="gender">
@@ -36,19 +42,19 @@ export default function Character() {
                   <FaTransgenderAlt />
                   Gender
                 </span>
-                <p>Male</p>
+                <p>{data.gender}</p>
               </div>
               <div className="birth">
                 <span>
                   <FaBirthdayCake /> Birth Year
                 </span>
-                <p>2019</p>
+                <p>{data.birth_year}</p>
               </div>
               <div className="eye">
                 <span>
                   <FaEye /> Eye color
                 </span>
-                <p>Blue</p>
+                <p>{data.eye_color}</p>
               </div>
             </div>
 
@@ -56,15 +62,15 @@ export default function Character() {
               <h3>Body Data</h3>
               <div className="height">
                 <span>
-                  <GiBodyHeight /> Height: 177
+                  <GiBodyHeight /> Height: {data.height}
                 </span>
-                <progress value="172" max="215" />
+                <progress value={data.height} max="215" />
               </div>
               <div className="mass">
                 <span>
-                  <FaWeight /> Mass: 77
+                  <FaWeight /> Mass: {data.mass}
                 </span>
-                <progress value="77" max="120" />
+                <progress value={data.mass} max="120" />
               </div>
             </div>
           </Bio>
@@ -73,3 +79,15 @@ export default function Character() {
     </ReactCardFlip>
   );
 }
+
+Character.propTypes = {
+  id: PropTypes.number.isRequired,
+  data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    birth_year: PropTypes.string.isRequired,
+    eye_color: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    mass: PropTypes.string.isRequired,
+  }).isRequired,
+};
