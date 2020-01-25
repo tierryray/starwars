@@ -9,7 +9,7 @@ export const FrontCard = styled.div`
   color: #fff;
   border-radius: 8px;
   transition: all 0.2s ease 0s;
-  box-shadow: 0px 30px 20px #000000;
+  box-shadow: 5px 20px 50px #000000;
 
   div {
     position: absolute;
@@ -18,7 +18,7 @@ export const FrontCard = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background: ${lighten(0.07, '#0B0A0D')};
     padding: 15px;
     border-radius: 5px;
@@ -41,7 +41,7 @@ export const BackCard = styled.div`
   background-color: ${lighten(0.07, '#0B0A0D')};
   color: #fff;
   border-radius: 8px;
-  box-shadow: 0px 30px 20px #000000;
+  box-shadow: 5px 20px 50px #000000;
 `;
 
 export const PicWrapper = styled.div`
@@ -57,6 +57,7 @@ export const PicWrapper = styled.div`
     background-size: cover;
     border-radius: 50%;
     border: 1px solid #ffe300;
+    box-shadow: 0px 0px 15px #ffe300;
   }
 `;
 
