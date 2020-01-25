@@ -5,6 +5,7 @@ import logo from '../../assets/star-wars-logo.png';
 
 import Character from '../../components/Character';
 import Loading from '../../components/Loading';
+import LoadingMore from '../../components/LoadingMoreCharacters';
 
 import { Container, LogoContainer, CharactersContainer } from './styles';
 
@@ -57,11 +58,7 @@ export default function Home() {
             pageStart={page}
             loadMore={handleNextPage}
             hasMore={next !== null}
-            loader={
-              <div className="loader" key={0}>
-                Loading ...
-              </div>
-            }
+            loader={<LoadingMore key={0} />}
           >
             {characters.map((character, index) => (
               // eslint-disable-next-line react/no-array-index-key
