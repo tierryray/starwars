@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { lighten } from 'polished';
 
 export const FrontCard = styled.div`
-  height: 400px;
+  height: 420px;
   background-color: ${lighten(0.07, '#0B0A0D')};
   background: url(${props => props.background}) top center no-repeat;
   background-size: cover;
@@ -37,7 +38,7 @@ export const FrontCard = styled.div`
 `;
 
 export const BackCard = styled.div`
-  height: 400px;
+  height: 420px;
   background-color: ${lighten(0.07, '#0B0A0D')};
   color: #fff;
   border-radius: 8px;
@@ -143,5 +144,22 @@ export const Bio = styled.div`
     .height {
       margin-bottom: 5px;
     }
+  }
+
+  .spaceships {
+    
+`;
+
+export const StyledLink = styled(Link)`
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  color: #ffe300;
+
+  small {
+    text-align: center;
+    margin-right: 5px;
   }
 `;

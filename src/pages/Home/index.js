@@ -45,11 +45,7 @@ export default function Home() {
   }
 
   return (
-    <Container>
-      <LogoContainer>
-        <img src={logo} alt="Star Wars" />
-      </LogoContainer>
-
+    <>
       {loading ? (
         <Loading />
       ) : (
@@ -67,6 +63,6 @@ export default function Home() {
           </CharactersContainer>
         </div>
       )}
-    </Container>
+    </>
   );
 }

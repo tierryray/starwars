@@ -8,9 +8,9 @@ import {
   FaTransgenderAlt,
   FaWeight,
 } from 'react-icons/fa';
-import { GiBodyHeight } from 'react-icons/gi';
+import { GiBodyHeight, GiSpaceship } from 'react-icons/gi';
 
-import { FrontCard, BackCard, PicWrapper, Bio } from './styles';
+import { FrontCard, BackCard, PicWrapper, Bio, StyledLink } from './styles';
 
 export default function Character({ data }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -77,6 +77,11 @@ export default function Character({ data }) {
                 <progress value={data.mass} max="120" />
               </div>
             </div>
+
+            <StyledLink to="/starships">
+              <small>Click here to see spaceships</small>
+              <GiSpaceship size={26} />
+            </StyledLink>
           </Bio>
         </PicWrapper>
       </BackCard>
