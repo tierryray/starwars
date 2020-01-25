@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const WrapperLoading = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
 
   animation: loading 3s infinite;

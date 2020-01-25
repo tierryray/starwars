@@ -12,8 +12,10 @@ import { GiBodyHeight } from 'react-icons/gi';
 
 import { FrontCard, BackCard, PicWrapper, Bio } from './styles';
 
-export default function Character({ id, data }) {
+export default function Character({ data }) {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  const id = data.url.match(/\d+/g);
 
   const backgroundURL = `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
 
@@ -83,8 +85,8 @@ export default function Character({ id, data }) {
 }
 
 Character.propTypes = {
-  id: PropTypes.number.isRequired,
   data: PropTypes.shape({
+    url: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     gender: PropTypes.string.isRequired,
     birth_year: PropTypes.string.isRequired,

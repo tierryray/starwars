@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import InfiniteScroll from 'react-infinite-scroller';
 
 export const Container = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ export const LogoContainer = styled.div`
   }
 `;
 
-export const CharactersContainer = styled.div`
+export const CharactersContainer = styled(InfiniteScroll)`
   display: grid;
   grid-gap: 50px;
   grid-template-columns: 1fr;

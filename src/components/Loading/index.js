@@ -6,7 +6,7 @@ export default function Loading() {
   return (
     <div className="container">
       <WrapperLoading>
-        <Text>A long loading ago, in a galaxy far, far away...</Text>
+        <Text>A long galaxy ago, in a galaxy far, far away...</Text>
       </WrapperLoading>
     </div>
   );
