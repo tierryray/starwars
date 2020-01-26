@@ -78,7 +78,14 @@ export default function Character({ data }) {
               </div>
             </div>
 
-            <StyledLink to="/starships">
+            <StyledLink
+              to={{
+                pathname: '/starships',
+                state: {
+                  data,
+                },
+              }}
+            >
               <small>Click here to see spaceships</small>
               <GiSpaceship size={26} />
             </StyledLink>

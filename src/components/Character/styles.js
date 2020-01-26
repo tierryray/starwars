@@ -43,6 +43,7 @@ export const BackCard = styled.div`
   color: #fff;
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
+  padding: 10px 20px;
 `;
 
 export const PicWrapper = styled.div`
@@ -65,7 +66,6 @@ export const PicWrapper = styled.div`
 export const Bio = styled.div`
   width: 100%;
   margin-top: 65px;
-  padding: 0 15px;
 
   .name {
     h2 {
@@ -145,9 +145,6 @@ export const Bio = styled.div`
       margin-bottom: 5px;
     }
   }
-
-  .spaceships {
-    
 `;
 
 export const StyledLink = styled(Link)`

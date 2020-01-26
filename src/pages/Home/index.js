@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import swapi from '../../services/api';
-
-import logo from '../../assets/star-wars-logo.png';
 
 import Character from '../../components/Character';
 import Loading from '../../components/Loading';
 import LoadingMore from '../../components/LoadingMoreCharacters';
 
-import { Container, LogoContainer, CharactersContainer } from './styles';
+import { CharactersContainer } from './styles';
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);
