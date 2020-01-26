@@ -11,11 +11,13 @@ export const Wrapper = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 40px;
+  align-items: center;
 
   img {
-    filter: drop-shadow(0px 10px 12px #000);
+    filter: drop-shadow(0px 15px 15px #000);
     width: 250px;
+    margin-top: -50px;
   }
 `;

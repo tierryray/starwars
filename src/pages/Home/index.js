@@ -5,6 +5,7 @@ import swapi from '../../services/api';
 import Character from '../../components/Character';
 import Loading from '../../components/Loading';
 import LoadingMore from '../../components/LoadingMoreCharacters';
+import ScrollToTop from '../../components/ScrolToTop';
 
 import { CharactersContainer } from './styles';
 
@@ -62,6 +63,7 @@ export default function Home() {
               <Character key={index} data={character} />
             ))}
           </CharactersContainer>
+          <ScrollToTop />
         </div>
       )}
     </>

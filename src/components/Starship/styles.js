@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
-export const ShipsWrapper = styled.div``;
+import { pattern } from '../../styles/variables';
 
 export const FrontCard = styled.div`
-  height: 200px;
-  background-color: ${lighten(0.07, '#0B0A0D')};
+  height: 300px;
+  background-color: ${lighten(0.07, pattern.background)};
   background: url(${props => props.background}) top center no-repeat;
   background-size: cover;
   color: #fff;
@@ -25,30 +25,39 @@ export const FrontCard = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: ${lighten(0.07, '#0B0A0D')};
+    background: ${lighten(0.07, pattern.background)};
     padding: 15px;
     border-radius: 5px;
 
     span {
       color: #fff;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
+      max-width: 150px;
     }
 
-    p {
-      color: #ffe300;
-      font-size: 12px;
+    span:last-child {
+      display: flex;
+      font-size: 14px;
+      justify-content: flex-end;
+      align-items: center;
+      color: ${pattern.yellow};
+
+      svg {
+        margin-right: 5px;
+      }
     }
   }
 `;
 
 export const BackCard = styled.div`
-  min-height: 200px;
-  background-color: ${lighten(0.07, '#0B0A0D')};
+  min-height: 300px;
+  background-color: ${lighten(0.07, pattern.background)};
   color: #fff;
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
   padding: 10px 20px;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     min-height: 300px;
@@ -56,7 +65,7 @@ export const BackCard = styled.div`
 
   h2 {
     text-align: center;
-    color: #ffe300;
+    color: ${pattern.yellow};
   }
 
   .info {
@@ -71,7 +80,7 @@ export const BackCard = styled.div`
       margin-bottom: 5px;
 
       span {
-        color: #ffe300;
+        color: ${pattern.yellow};
         margin-right: 5px;
       }
     }

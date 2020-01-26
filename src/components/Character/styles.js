@@ -2,24 +2,16 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { lighten } from 'polished';
 
+import { pattern } from '../../styles/variables';
+
 export const FrontCard = styled.div`
   height: 420px;
-  background-color: ${lighten(0.07, '#0B0A0D')};
   background: url(${props => props.background}) top center no-repeat;
   background-size: cover;
   color: #fff;
   border-radius: 8px;
-  transition: all 0.2s ease 0s;
   box-shadow: 5px 20px 50px #000000;
   cursor: pointer;
-
-  &:hover {
-    transform: translateY(-10px);
-  }
-
-  &:focus {
-    transform: translateY(0);
-  }
 
   div {
     position: absolute;
@@ -29,7 +21,7 @@ export const FrontCard = styled.div`
     align-items: center;
     width: 100%;
     height: 60px;
-    background: ${lighten(0.07, '#0B0A0D')};
+    background: ${lighten(0.07, pattern.background)};
     padding: 15px;
     border-radius: 5px;
 
@@ -37,6 +29,7 @@ export const FrontCard = styled.div`
       color: #fff;
       font-size: 20px;
       font-weight: bold;
+      max-width: 150px;
     }
 
     span:last-child {
@@ -44,7 +37,7 @@ export const FrontCard = styled.div`
       font-size: 14px;
       justify-content: flex-end;
       align-items: center;
-      color: #ffe300;
+      color: ${pattern.yellow};
 
       svg {
         margin-right: 5px;
@@ -55,18 +48,12 @@ export const FrontCard = styled.div`
 
 export const BackCard = styled.div`
   height: 420px;
-  background-color: ${lighten(0.07, '#0B0A0D')};
+  background-color: ${lighten(0.07, pattern.background)};
   color: #fff;
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
   padding: 10px 20px;
-  transform: translateY(0);
-  transition: all 0.2s ease 0s;
   cursor: pointer;
-
-  &:hover {
-    transform: translateY(-10px);
-  }
 `;
 
 export const PicWrapper = styled.div`
@@ -81,8 +68,8 @@ export const PicWrapper = styled.div`
     background: url(${props => props.picture}) top center no-repeat;
     background-size: cover;
     border-radius: 50%;
-    border: 1px solid #ffe300;
-    box-shadow: 0px 0px 15px #ffe300;
+    border: 1px solid ${pattern.yellow};
+    box-shadow: 0px 0px 15px ${pattern.yellow};
   }
 `;
 
@@ -123,7 +110,7 @@ export const Bio = styled.div`
       display: flex;
       align-items: center;
       font-weight: bold;
-      color: #ffe300;
+      color: ${pattern.yellow};
 
       svg {
         margin-right: 5px;
@@ -132,7 +119,7 @@ export const Bio = styled.div`
   }
 
   .body {
-    color: #ffe300;
+    color: ${pattern.yellow};
 
     h3 {
       margin-bottom: 10px;
@@ -176,7 +163,7 @@ export const StyledLink = styled(Link)`
   right: 10px;
   display: flex;
   align-items: center;
-  color: #ffe300;
+  color: ${pattern.yellow};
   opacity: 1;
   transition: opacity 0.2s ease-out;
 

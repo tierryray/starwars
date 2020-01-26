@@ -75,7 +75,7 @@ export default function Starships({ location }) {
 Starships.propTypes = {
   location: PropTypes.shape({
     state: PropTypes.shape({
-      data: PropTypes.array.isRequired,
+      data: PropTypes.object.isRequired,
     }).isRequired,
   }).isRequired,
 };

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import ReactCardFlip from 'react-card-flip';
 
+import { GiClick } from 'react-icons/gi';
+
 import { FrontCard, BackCard } from './styles';
 
 export default function Starship({ data }) {
@@ -20,7 +22,10 @@ export default function Starship({ data }) {
       >
         <div>
           <span>{data.name}</span>
-          <p>Click to see more info</p>
+          <span>
+            <GiClick size={22} />
+            Show info
+          </span>
         </div>
       </FrontCard>
 
