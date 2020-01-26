@@ -31,11 +31,21 @@ export const R2D2 = styled.div`
   flex-direction: column;
   align-items: center;
 
+  @media screen and (min-width: 768px) {
+    img {
+      width: 120px;
+    }
+  }
+
   span {
     font-weight: bold;
     font-size: 18px;
     margin-top: 15px;
     color: #a9a9a9;
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+    }
   }
 `;
