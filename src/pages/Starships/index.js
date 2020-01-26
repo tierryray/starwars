@@ -58,7 +58,7 @@ export default function Starships({ location }) {
       ) : !starships.length > 0 ? (
         <R2D2>
           <img src={r2d2Image} alt="R2D2" />
-          <span>Beboobeep! He doesn't have spaceships!</span>
+          <span>Beboobeep! He doesn&apos;t have spaceships!</span>
         </R2D2>
       ) : (
         <StarshipsContainer>

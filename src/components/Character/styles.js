@@ -11,6 +11,15 @@ export const FrontCard = styled.div`
   border-radius: 8px;
   transition: all 0.2s ease 0s;
   box-shadow: 5px 20px 50px #000000;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &:focus {
+    transform: translateY(0);
+  }
 
   div {
     position: absolute;
@@ -26,13 +35,20 @@ export const FrontCard = styled.div`
 
     span {
       color: #fff;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
     }
 
-    p {
+    span:last-child {
+      display: flex;
+      font-size: 14px;
+      justify-content: flex-end;
+      align-items: center;
       color: #ffe300;
-      font-size: 11px;
+
+      svg {
+        margin-right: 5px;
+      }
     }
   }
 `;
@@ -44,6 +60,13 @@ export const BackCard = styled.div`
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
   padding: 10px 20px;
+  transform: translateY(0);
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 `;
 
 export const PicWrapper = styled.div`
@@ -154,6 +177,12 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   color: #ffe300;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   small {
     text-align: center;

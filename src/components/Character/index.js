@@ -8,7 +8,7 @@ import {
   FaTransgenderAlt,
   FaWeight,
 } from 'react-icons/fa';
-import { GiBodyHeight, GiSpaceship } from 'react-icons/gi';
+import { GiBodyHeight, GiSpaceship, GiClick } from 'react-icons/gi';
 
 import { FrontCard, BackCard, PicWrapper, Bio, StyledLink } from './styles';
 
@@ -27,7 +27,10 @@ export default function Character({ data }) {
       >
         <div>
           <span>{data.name}</span>
-          <p>Click to see more info</p>
+          <span>
+            <GiClick size={22} />
+            Show info
+          </span>
         </div>
       </FrontCard>
 

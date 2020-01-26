@@ -23,4 +23,16 @@ export const CharactersContainer = styled(InfiniteScroll)`
   display: grid;
   grid-gap: 50px;
   grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 `;

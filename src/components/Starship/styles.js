@@ -12,6 +12,11 @@ export const FrontCard = styled.div`
   border-radius: 8px;
   transition: all 0.2s ease 0s;
   box-shadow: 5px 20px 50px #000000;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    height: 300px;
+  }
 
   div {
     position: absolute;
@@ -44,6 +49,10 @@ export const BackCard = styled.div`
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
   padding: 10px 20px;
+
+  @media screen and (min-width: 768px) {
+    min-height: 300px;
+  }
 
   h2 {
     text-align: center;

@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   min-width: 250px;
   padding: 20px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
 `;
 
 export const LogoContainer = styled.div`

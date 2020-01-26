@@ -16,6 +16,14 @@ export const StarshipsContainer = styled.div`
   display: grid;
   grid-gap: 25px;
   grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const R2D2 = styled.div`
