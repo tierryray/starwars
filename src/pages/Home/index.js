@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import swapi from '../../services/api';
 
 import Character from '../../components/Character';
@@ -26,7 +27,9 @@ export default function Home() {
       setNext(data.next);
       setPage(page + 1);
     } catch (e) {
-      console.log('Eita! Deu erro!');
+      toast.error('Something went wrong! I have a bad feeling about this', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
     } finally {
       setLoading(false);
     }

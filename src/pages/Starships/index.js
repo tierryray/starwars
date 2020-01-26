@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -34,7 +35,9 @@ export default function Starships({ location }) {
 
       setStarships([...starships, ...totalStarships]);
     } catch (e) {
-      console.log('Deu ruim');
+      toast.error('Something went wrong! I have a bad feeling about this', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
     } finally {
       setLoading(false);
     }
