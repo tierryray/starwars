@@ -28,6 +28,7 @@ export const Text = styled.h2`
   font-weight: bold;
   line-height: 1.35;
   text-shadow: 0px 15px 10px #bebebe;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
