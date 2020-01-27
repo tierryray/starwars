@@ -46,6 +46,7 @@ This command will automatically open the browser on `http://localhost:3000`.
 | 🔹 React Card Flip         | [DOCUMENTATION](https://www.npmjs.com/package/react-card-flip)         |
 
 To consume data, I used [SWAPI](https://swapi.co/)
+
 To consume images of the characters and their starships, I used the [Star Wars Visual Guide](https://starwars-visualguide.com/)
 
 ### TESTS
