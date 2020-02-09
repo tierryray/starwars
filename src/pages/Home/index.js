@@ -5,7 +5,7 @@ import swapi from '../../services/api';
 import Character from '../../components/Character';
 import Loading from '../../components/Loading';
 import LoadingMore from '../../components/LoadingMoreCharacters';
-import ScrollToTop from '../../components/ScrolToTop';
+import ScrollToTop from '../../components/ScrollToTop';
 
 import { CharactersContainer } from './styles';
 

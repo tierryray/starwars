@@ -1,12 +1,11 @@
 import React from 'react';
 import ScrollToTop from 'react-scroll-up';
-
 import { FaArrowUp } from 'react-icons/fa';
-import { pattern } from '../../styles/variables';
+import theme from '../../styles/Theme';
 
 const style = {
-  background: pattern.background,
-  color: pattern.yellow,
+  background: theme.colors.black,
+  color: theme.colors.yellow,
   padding: '5px',
   borderRadius: '10px',
   boxShadow: '0 5px 20px #000',

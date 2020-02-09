@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
-import { pattern } from '../../styles/variables';
-
 export const FrontCard = styled.div`
   height: 300px;
-  background-color: ${lighten(0.07, pattern.background)};
+  background-color: ${props => lighten(0.07, props.theme.colors.black)};
   background: url(${props => props.background}) top center no-repeat;
   background-size: cover;
   color: #fff;
@@ -25,7 +23,7 @@ export const FrontCard = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: ${lighten(0.07, pattern.background)};
+    background-color: ${props => lighten(0.07, props.theme.colors.black)};
     padding: 15px;
     border-radius: 5px;
 
@@ -41,7 +39,7 @@ export const FrontCard = styled.div`
       font-size: 14px;
       justify-content: flex-end;
       align-items: center;
-      color: ${pattern.yellow};
+      color: ${props => props.theme.colors.yellow};
 
       svg {
         margin-right: 5px;
@@ -52,7 +50,7 @@ export const FrontCard = styled.div`
 
 export const BackCard = styled.div`
   min-height: 300px;
-  background-color: ${lighten(0.07, pattern.background)};
+  background-color: ${props => lighten(0.07, props.theme.colors.black)};
   color: #fff;
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
@@ -65,7 +63,7 @@ export const BackCard = styled.div`
 
   h2 {
     text-align: center;
-    color: ${pattern.yellow};
+    color: ${props => props.theme.colors.yellow};
   }
 
   .info {
@@ -80,7 +78,7 @@ export const BackCard = styled.div`
       margin-bottom: 5px;
 
       span {
-        color: ${pattern.yellow};
+        color: ${props => props.theme.colors.yellow};
         margin-right: 5px;
       }
     }

@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { lighten } from 'polished';
 
-import { pattern } from '../../styles/variables';
-
 export const FrontCard = styled.div`
   height: 420px;
   background: url(${props => props.background}) top center no-repeat;
@@ -21,7 +19,7 @@ export const FrontCard = styled.div`
     align-items: center;
     width: 100%;
     height: 60px;
-    background: ${lighten(0.07, pattern.background)};
+    background: ${props => lighten(0.07, props.theme.colors.black)};
     padding: 15px;
     border-radius: 5px;
 
@@ -37,7 +35,7 @@ export const FrontCard = styled.div`
       font-size: 14px;
       justify-content: flex-end;
       align-items: center;
-      color: ${pattern.yellow};
+      color: ${props => props.theme.colors.yellow};
 
       svg {
         margin-right: 5px;
@@ -48,7 +46,7 @@ export const FrontCard = styled.div`
 
 export const BackCard = styled.div`
   height: 420px;
-  background-color: ${lighten(0.07, pattern.background)};
+  background-color: ${props => lighten(0.07, props.theme.colors.black)};
   color: #fff;
   border-radius: 8px;
   box-shadow: 5px 20px 50px #000000;
@@ -68,8 +66,8 @@ export const PicWrapper = styled.div`
     background: url(${props => props.picture}) top center no-repeat;
     background-size: cover;
     border-radius: 50%;
-    border: 1px solid ${pattern.yellow};
-    box-shadow: 0px 0px 15px ${pattern.yellow};
+    border: 1px solid ${props => props.theme.colors.yellow};
+    box-shadow: 0px 0px 15px ${props => props.theme.colors.yellow};
   }
 `;
 
@@ -110,7 +108,7 @@ export const Bio = styled.div`
       display: flex;
       align-items: center;
       font-weight: bold;
-      color: ${pattern.yellow};
+      color: ${props => props.theme.colors.yellow};
 
       svg {
         margin-right: 5px;
@@ -119,7 +117,7 @@ export const Bio = styled.div`
   }
 
   .body {
-    color: ${pattern.yellow};
+    color: ${props => props.theme.colors.yellow};
 
     h3 {
       margin-bottom: 10px;
@@ -163,7 +161,7 @@ export const StyledLink = styled(Link)`
   right: 10px;
   display: flex;
   align-items: center;
-  color: ${pattern.yellow};
+  color: ${props => props.theme.colors.yellow};
   opacity: 1;
   transition: opacity 0.2s ease-out;
 
