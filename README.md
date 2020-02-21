@@ -4,7 +4,7 @@ This project is a web app that shows cards from the Star Wars characters, with t
 
 To execute it, follow the procedures below or access:
 
-> http://starwars-invillia.surge.sh/
+> http://starwars-cards.surge.sh/
 
 Enjoy it!
 
